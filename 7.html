@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+
+                <!-- 样式清除表 -->
+                <link rel="stylesheet" href="./css/reset.css">
+
+                <!-- 引入小图标 -->
+                <link rel="stylesheet" href="./fa/css/all.css">
+
+                <style>
+                                body{
+                                                font-size: 12px;
+                                }
+
+                                /* 解决高度塌陷问题 */
+                                .clearfix::after,
+                                .clearfix::before{
+                                                content: '';
+                                                display: table;
+                                                clear: both;
+                                }
+
+                                /* 设置外部容器 */
+                                .box1{
+                                                /* 设置宽高 */
+                                                width: 240px;
+                                                /* height: 226px; */
+                                                /* 设置背景颜色 */
+                                                background-color: #FCFFFC;
+                                                /* 设置外边距 */
+                                                margin: 20px auto;
+                                                /* 设置圆角 */
+                                                border-radius: 3px;
+                                                /* 设置阴影 */
+                                                /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+                                }
+
+                                /* 设置图片 */
+                                .box1 .picture img{
+                                                width: 100%;
+                                                /* img是行内元素，vertical-aligh的默认值是baseline，导致图片下方有一条白线，将其改变为块元素可解决问题 */
+                                                /* 或者直接将vertical-aligh设置为bottom */
+                                                display: block;
+                                }
+
+                                /* 设置内部容器 */
+                                .box1 .main-box{
+                                                /* height: 110px; */
+                                                /* padding: 6px 12px; */
+                                                /* 设置边框 */
+                                                /* border: 1px solid #DEDFDC; */
+                                                border-top: none;
+                                }
+                                /* 设置标题 */
+                                .box1 .title h1{
+                                                color:#717171;
+                                                font-size: 18px;
+                                                /* background-color: red; */
+                                                padding: 13px 18px 15px 18px;
+                                }
+
+                                /* 设置分区部分 */
+                                .box1 .part{
+                                                padding: 7px 18px 0;
+                                                color: #aaaaaa;
+                                                font-size: 14px;
+                                }
+                                /* 设置小图标 */
+                                 .box1 .part i{
+                                                margin-right: 7px;
+                                 } 
+
+
+                                /* 设置内容区 */
+                                .box1 .main-box .main{
+                                                font-size: 14px;
+                                                color: #aaaaaa;
+                                                margin: 18px 18px 18px 22px;
+                                                /* background-color: red; */
+                                                line-height: 20px;
+                                }
+                                
+                                /* 设置分区和内容向右移动 */
+                               .box1 .part{
+                                margin-left: 4px;
+                               }
+
+                                /* 设置评分区 */
+                                .box1 .main-box .star-box{
+                                                border-top: 1px solid #e9e9e9;
+                                                padding: 0px 16px;
+                                                height: 46px;
+                                                line-height: 46px;
+                                }
+
+                                /* 设置星星 */
+                                .box1 .main-box .star-box .star{
+                                                float: left;
+                                                color: #DCDEDB;
+                                                padding-right: 3px;
+                                }
+
+                                /* 设置绿色星星 */
+                                .box1 .main-box .star-box .green{
+                                                color: #B5C238;
+                                }
+                                /* 设置facebook图标 */
+                                .box1 .main-box .star-box .facebook{
+                                                float: right;
+                                                color: #DCDEDB;
+                                }
+
+
+
+                </style>        
+
+                
+</head>
+<body>
+                <!-- 创建外部容器 -->
+                <div class="box1">
+
+                                <!-- 创建图片容器 -->
+                                <div class="picture">
+                                                <img src="./img/10/1.jpg" alt="">
+                                </div>
+
+                                <!-- 创建内容区 -->
+                                <div class="main-box">
+
+                                                <!-- 创建标题容器 -->
+                                                <div class="title">
+                                                                <h1>Animation films</h1>
+                                                </div>
+
+                                                <!-- 创建分区 -->
+                                                <div class="part">
+                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                <span>Animations</span>
+                                                </div>
+
+                                                <!-- 创建内容区 -->
+                                                <div class="main">
+                                                                Lorem ipsum is simply dummy text of the printing & typesetting industry.
+                                                </div>
+
+                                                <!-- 创建评分容器 -->
+                                                <ul class="star-box clearfix">
+                                                <li class="star green"><i class="fas fa-star"></i></li>
+                                                <li class="star green"><i class="fas fa-star"></i></li>
+                                                <li class="star"><i class="fas fa-star"></i></li>
+                                                <li class="star"><i class="fas fa-star"></i></li>
+
+                                                <li class="facebook"><i class="fab fa-facebook-square"></i></li>
+                                                </ul>
+                                </div>
+
+                                
+                                
+                </div>
+</body>
+</html>
